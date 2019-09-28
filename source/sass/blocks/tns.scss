@@ -1,0 +1,48 @@
+
+.tns {
+
+  &-controls > button {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    @include button-reset;
+    width: 14px;
+    height: 23px;
+    background-image: url("../img/icon-arrow-left2.png");
+    @include hide-text;
+
+  }
+
+  &-controls > button:first-child {
+    left: 122px;
+  }
+  &-controls > button:last-child {
+    right: 122px;
+    background-image: url("../img/icon-arrow-right2.png");
+  }
+
+  &-nav {
+    position: absolute;
+    z-index: 10;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-nav button {
+    @include button-reset;
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    margin: 0 8px;
+    outline: none;
+
+    background-color: #999;
+  }
+
+  &-nav &-nav-active {
+    background-color: #fff;
+  }
+
+}

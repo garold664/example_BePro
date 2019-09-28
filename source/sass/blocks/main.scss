@@ -1,0 +1,17 @@
+
+.main {
+  background-color: #fff;
+  padding-bottom: 0px;
+  &__container {
+    width: 1282px;
+    margin: 0 auto;
+  }
+
+  &__container::before {
+    content: "";
+    display: table;
+  }
+  
+
+
+}

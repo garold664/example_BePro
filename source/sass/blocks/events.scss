@@ -1,0 +1,42 @@
+.events {
+    position: relative;
+    max-width: 1366px;
+    margin: 0 auto;
+
+  &__event {
+    position: relative;
+    min-height: 400px;
+    max-width: 1366px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg-event.jpg");
+  }
+
+  &__event-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__event-label {
+    font-family: MontserratSemiBold;
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__event-title {
+    padding-top: 12px;
+    font-family: $playfairD;
+    font-weight: normal;
+    font-size: 36px;
+    color: #fff;
+  }
+
+  &__event-date {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,79 @@
+.page-nav {
+
+  float: left;
+
+  &--user {
+    float: right;
+  }
+  &--icons {
+    float: right;
+    padding-left: 50px;
+  }
+
+  &__list {
+    @include clearfix;
+  }
+
+  &__item {
+    float: left;
+    padding-right: 32px;
+  }
+
+  & &__item:last-child {
+    padding-right: 0;
+  }
+
+
+  &__link {
+    font-family: $montserrat;
+    font-size: 12px;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+
+    &--cart {
+      display: inline-block;
+      width: 30px;
+      height: 34px;
+      vertical-align: middle;
+      @include hide-text;
+      background-repeat: no-repeat;
+      background-image: url("../img/icon-cart.png");
+
+    }
+
+    &--search {
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      vertical-align: middle;
+      @include hide-text;
+      background-repeat: no-repeat;
+      background-image: url("../img/icon-search.png");
+      
+    }
+  }
+
+  &__dropdown {
+    display: inline-block;
+    width: 8px;
+    height: 5px;
+    margin-left: 6px;
+    @include hide-text;
+    vertical-align: middle;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-arrow-down.png");
+  }
+
+
+  &--user &__item {
+    padding-right: 20px;
+  }
+
+  &--icons &__item {
+    padding-right: 36px;
+  }
+
+}

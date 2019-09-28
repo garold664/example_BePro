@@ -1,0 +1,73 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  width: 280px;
+  margin: auto;
+
+  @media #{tablet-widths} {
+    width: 620px;
+  }
+
+  @media #{desktop-widths} {
+    width: 940px;
+  }
+}
+
+@mixin bottom-border {
+  & {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    border-bottom: 1px solid #396ea9;
+  }
+}
+
+@mixin hide-text {
+  // font-size: 0;
+  // box-shadow: none;
+  // color: transparent;
+
+  // text-indent: -1000px;
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+
+}
+
+@mixin button-reset {
+
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin visuallyhidden {
+  position: absolute !important;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  word-wrap: normal;
+}

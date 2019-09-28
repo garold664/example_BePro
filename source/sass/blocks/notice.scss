@@ -1,0 +1,17 @@
+.notice {
+  padding-top: 45px;
+  text-align: center;
+
+
+  & a {
+    color: #396ea9;
+
+    @include bottom-border;
+  }
+
+  &__answer {
+    padding-top: 5px;
+    font-size: 24px;
+  }
+
+}

@@ -1,0 +1,42 @@
+
+.page-header {
+
+  background-color: $blue;
+  
+  &__container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 20px 0 20px; 
+  }
+
+  &__top {
+    padding-bottom: 10px;
+    @include clearfix;
+  }
+
+  &__logo {
+    float: left;
+    padding-right: 105px;
+    font-size: 24px;
+  }
+
+  &__content {
+    padding-top: 250px;
+    min-height: 630px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -39px;
+    background-image: url("../img/bg-header-1.png");
+  }
+
+  &__content-title {
+    font-family: $playfairD;
+    font-size: 72px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+
+}
+

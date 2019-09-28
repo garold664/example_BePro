@@ -1,0 +1,18 @@
+.page-footer {
+  background-color: #000;
+
+
+  &__container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px; 
+    font-size: 0;
+  }
+
+
+  & .logo {
+    width: 22px;
+    height: 22px;
+  }
+
+}

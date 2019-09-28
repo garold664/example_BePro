@@ -1,0 +1,26 @@
+.list {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  padding-left: 10px;
+  list-style: none;
+
+
+  &__item::before {
+    content: "•";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+  }
+
+}
+
+
+.list--columns {
+  padding-top: 20px;
+
+  & li {
+    padding-bottom: 12px;
+  }
+
+}

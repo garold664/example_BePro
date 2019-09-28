@@ -1,0 +1,61 @@
+.easy-autocomplete {
+
+  &--opened {
+    position: absolute;
+    box-shadow: 0px 0px 10px 0px rgba(88, 204, 244, 0.9);
+    border-radius: 5px;  
+  }
+  
+  &--opened input {
+    outline: none;
+    border-color: #a6acb2;
+    border-radius: 5px 5px 0 0;
+    box-shadow: none;
+  }
+
+  & input {
+    border-color: #a6acb2;
+  }
+
+  & input:focus {
+    box-shadow: 0px 0px 10px 0px rgba(88, 204, 244, 0.9);
+  }
+
+
+  &--opened input:focus {
+    box-shadow: none;
+  }
+  
+
+  &--opened &-container {
+    position: static;
+    margin-top: -5px;
+    border: 1px solid #a6acb2;
+    border-radius: 5px;
+  }
+
+  &-container ul {
+    // display: block !important;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  &-container ul li, &-container ul .eac-category {
+    padding: 8px 16px;
+    border-width: 0;
+  }
+
+  &-container ul li.selected {
+    border-width: 0px;
+  }
+
+  &-container ul li:first-child {
+    border-width: 0;
+    padding-top: 13px;
+  }
+  &-container ul li:last-child {
+    border-width: 0;
+  }
+}
+
+

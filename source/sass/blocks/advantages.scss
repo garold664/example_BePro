@@ -1,0 +1,74 @@
+.advantages {
+  border: 1px solid #d5d5d6;
+  border-radius: 5px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  margin-top: -75px;
+  margin-bottom: 30px;
+  background-color: #fff;
+
+  &__container {
+    @include clearfix;
+  }
+
+  &__item {
+    font-family: $montserrat;
+    position: relative;
+    float: left;
+    width: 327px;
+    min-height: 80px;
+    padding-left: 114px;
+    padding-right: 15px;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    border-right: 1px solid #d3d3d3;
+  }
+
+  &__item:last-child, &__item:first-child {
+    width: 313px;
+  }
+
+  &__item:last-child {
+    border: none;
+    padding-left: 128px;
+  }
+
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+
+    background-repeat: no-repeat;
+  }
+
+  &__item--shipping::before {
+    background-image: url("../img/icon-shipping.png");
+  }
+  &__item--return::before {
+    background-image: url("../img/icon-return.png");
+  }
+  &__item--payment::before {
+    top: 27px;
+    background-image: url("../img/icon-payment.png");
+  }
+  &__item--support::before {
+    left: 70px;
+    top: 24px;
+    background-image: url("../img/icon-support.png");
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 200;
+    color: #999;
+  }
+}
