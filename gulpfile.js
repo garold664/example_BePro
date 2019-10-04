@@ -80,7 +80,7 @@ function cleanAll(done) {
 function copyAll(done) {
   
   gulp.src(["source/fonts/**/*.{woff,woff2}", "source/img/**","source/js/**/*.{js,css}", "source/*.html"], {base: "source"})
-  // .pipe(plumber())
+  .pipe(plumber())
   .pipe(copy())
   .pipe(gulp.dest("build"));
 
@@ -95,7 +95,7 @@ function copyAll(done) {
 
 function copyHtml(done) {
   
-  gulp.src(["source/*.html"], {base:"source"})
+  gulp.src(["source/*.html"], {base: "source"})
     .pipe(copy())
     .pipe(gulp.dest("build"))
     .pipe(server.reload({stream: true}));
@@ -107,7 +107,7 @@ function copyHtml(done) {
 function copyJS(done) {
 
 // заодно копируются файлы плагинов (js, css)  
-  gulp.src(["source/js/**/*{js,css}"], {base:"source"})
+  gulp.src(["source/js/**/*{js,css}"], {base: "source"})
     .pipe(copy())
     .pipe(gulp.dest("build"))
     .pipe(server.reload({stream: true}));
