@@ -3,7 +3,7 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
   sass.compiler = require('node-sass');
-  
+
 var sourcemaps = require("gulp-sourcemaps");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -15,7 +15,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 
 var copy = require('gulp-contrib-copy');
-var clean = require('gulp-contrib-clean');
+var clean = require('del');
 // var clean = require('gulp-clean');
 
 // gulp.task("style", function(done) {
@@ -65,12 +65,7 @@ function images(done) {
 // gulp.task("clean", function(done) {
 
 function cleanAll(done) {
-  
-  gulp.src('build', {allowEmpty: true, base: "build"})
-    // .pipe(plumber())
-    .pipe(clean());
-
-  done();
+    return clean("build");
 }
 
 // });
@@ -78,7 +73,7 @@ function cleanAll(done) {
 // gulp.task("copy", function(done) {
 
 function copyAll(done) {
-  
+
   gulp.src(["source/fonts/**/*.{woff,woff2}", "source/img/**","source/js/**/*.{js,css}", "source/*.html"], {base: "source"})
   .pipe(plumber())
   .pipe(copy())
@@ -94,7 +89,7 @@ function copyAll(done) {
 // gulp.task("copy-html", function(done) {
 
 function copyHtml(done) {
-  
+
   gulp.src(["source/*.html"], {base: "source"})
     .pipe(copy())
     .pipe(gulp.dest("build"))
@@ -106,7 +101,7 @@ function copyHtml(done) {
 
 function copyJS(done) {
 
-// заодно копируются файлы плагинов (js, css)  
+// заодно копируются файлы плагинов (js, css)
   gulp.src(["source/js/**/*{js,css}"], {base: "source"})
     .pipe(copy())
     .pipe(gulp.dest("build"))
@@ -120,7 +115,7 @@ function copyJS(done) {
 // gulp.task("serve", gulp.series("style"), function() {
 
 function serve() {
-  
+
   server.init({
     server: "build",
     notify: false,
