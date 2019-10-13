@@ -8,9 +8,7 @@
     "type": "git",
     "url": "git@github.com:garold664/example_BePro.git"
   },
-  "bugs": {
-
-  },
+  "bugs": {},
   "homepage": "github.com:garold664",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
