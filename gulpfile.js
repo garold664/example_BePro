@@ -9,7 +9,6 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
-var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
@@ -27,10 +26,7 @@ function style(done) {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(postcss([
-      autoprefixer(),
-      mqpacker({
-        sort: true
-      })
+      autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
