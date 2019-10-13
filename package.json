@@ -1,17 +1,17 @@
 {
-  "name": "175452-pink",
+  "name": "example_BePro",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
+  "description": "BePro из рассылки HTML Academy",
   "author": "Нияз Мухаметзянов",
   "repository": {
     "type": "git",
-    "url": "git@github.com:htmlacademy-adaptive/175452-pink.git"
+    "url": "git@github.com:garold664/example_BePro.git"
   },
   "bugs": {
-    "url": "https://github.com/htmlacademy-adaptive/175452-pink/issues"
+
   },
-  "homepage": "https://github.com/htmlacademy-adaptive/175452-pink",
+  "homepage": "github.com:garold664",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
