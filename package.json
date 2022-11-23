@@ -12,7 +12,7 @@
   "homepage": "github.com:garold664",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "del": "^5.1.0",
     "editorconfig-tools": "^0.1.1",
     "gulp": "^4.0.2",
